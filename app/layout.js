@@ -12,7 +12,7 @@ export const metadata = {
     title: "Rev. Fr. Benjamin Achi",
     description: "This is the profile page of Rev. Fr. Benjamin Achi.",
     siteName: "Rev. Fr. Benjamin Achi Profile Page",
-    // url: "https://nfvcb-coop-new.vercel.app",
+    url: "https://frbenfrankachi.vercel.app",
     images: [
       {
         url: "https://res.cloudinary.com/mctony17/image/upload/v1696803255/logos/frbenachi.webp",
