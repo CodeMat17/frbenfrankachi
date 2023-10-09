@@ -7,7 +7,7 @@ const AboutMe = () => {
     
       <div className='text-lg pt-8 max-w-lg mx-auto flex flex-col gap-4'>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+          Hic textus phantasticus est, tamen legebatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
           molestias a officiis voluptatem quibusdam magni suscipit numquam vero
           fuga asperiores?
         </p>
