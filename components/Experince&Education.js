@@ -1,4 +1,27 @@
+'use client'
+
+import { motion } from "framer-motion";
 import PageTitle from "./PageTitle";
+
+const animateYear = {
+  offscreen: { x: -100, opacity: 0 },
+  onscreen: {
+    x: 0,
+    opacity: 1,
+    rotate: [0, 10, 0],
+    transition: { type: "spring", bounce: 0.4, duration: 1 },
+  },
+};
+
+const animateText = {
+  offscreen: { x: -100, opacity: 0 },
+  onscreen: {
+    x: 0,
+    opacity: 1,
+    transition: { type: "spring", bounce: 0.4, duration: 1.5 },
+  },
+};
+
 
 const eduEpx = [
   {
@@ -43,20 +66,28 @@ const Education = () => {
     <div id='experience' className='px-4 py-12'>
       <PageTitle title='Experience & Education' />
 
-      <div className='pt-8 max-w-lg mx-auto flex flex-col gap-4'>
+      <motion.div className='pt-8 max-w-lg mx-auto flex flex-col gap-4'>
         {eduEpx.map((epx) => (
-          <div key={epx.id} className='w-full flex gap-8'>
-            <div className='w-[10%] font-medium text-xl text-yellow-600'>{epx.year}</div>
-            <div>
-              <h2 className='uppercase font-medium text-xl text-[#521d4d]'>
+          <motion.div
+            key={epx.id}
+            initial={"offscreen"}
+            whileInView={"onscreen"}
+            viewport={{ once: false, amount: 0.8 }}
+            transition={{ staggerChildren: 0.5 }}
+            className='w-full flex gap-8'>
+            <motion.div variants={animateYear} className='w-[10%] font-medium text-xl text-yellow-600'>
+              {epx.year}
+            </motion.div>
+            <motion.div>
+              <motion.h2 variants={animateText} className='uppercase font-medium text-xl text-[#521d4d]'>
                 {epx.title}{" "}
-              </h2>
-              <h3 className="text-lg">{epx.institution}</h3>
-              <p className='pt-2'>{epx.desc}</p>
-            </div>
-          </div>
+              </motion.h2>
+              <motion.h3 variants={animateText} className='text-lg'>{epx.institution}</motion.h3>
+              <motion.p variants={animateText} className='pt-2'>{epx.desc}</motion.p>
+            </motion.div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };
