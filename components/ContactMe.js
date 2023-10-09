@@ -18,7 +18,7 @@ const ContactMe = () => {
                 <BiMailSend className='text-yellow-600 text-4xl' />
               </div>
             </Link>
-            <Link href='https://wa.me/2348063856120' target='_blank'>
+            <Link href='https://wa.me/2348036765992' target='_blank'>
               <div className='transition-all duration-300 ease-in bg-yellow-600/10 hover:bg-yellow-600/40 w-[50px] h-[50px] rounded-full flex items-center justify-center '>
                 <BiLogoWhatsapp className='text-yellow-600 text-4xl' />
               </div>
